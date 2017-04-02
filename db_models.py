@@ -10,7 +10,7 @@ from playhouse.apsw_ext import APSWDatabase
 
 # APSW SQLite Driver, which is faster and provides:
 # "Connections can be shared across threads without any additional locking"
-database = APSWDatabase('data/test.sqlite3')
+database = APSWDatabase('data/test.sqlite3', timeout=1000)
 
 class UnknownField(object):
     def __init__(self, *_, **__): pass
